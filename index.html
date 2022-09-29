@@ -29,11 +29,12 @@
 
     .container {
       width: 600px;
-      height: fit-content;
+      height:min-content;
       display: grid;
       grid-template-columns: 1fr; 
       background-color: hsl(0, 0%, 100%);
       border-radius: 0.9375rem;
+      overflow: hidden;
     }
 
     @media (min-width: 375px) {
@@ -45,19 +46,17 @@
     }
 
     picture, img {
-      display: block;
+
+      border-radius: inherit;
       width: auto;
       height: 100%;
-      object-fit: fill;
-      border-radius: inherit;
-      
     }
 
     .col-2 {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      justify-content: space-between;
       padding: 20px;
     }
 
@@ -97,11 +96,11 @@
     button {
       background-color: hsl(158, 36%, 37%);
       border: none;
-      color: White: hsl(0, 0%, 100%);;
+      color: White hsl(0, 0%, 100%);;
       padding: 10px;
       text-decoration: none;
       border-radius: 10px;
-      
+    
     }
 
     #footer-container {
@@ -122,10 +121,12 @@
 </head>
 <body>
   <main class="container">
-    <picture class="col-1" alt="A Chanel perfume bottle.">
-      <source media="(max-width: 375px)" srcset="images/image-product-mobile.jpg">
-      <img src="images/image-product-desktop.jpg">
-    </picture>
+    <div class="col-1">
+      <picture alt="A Chanel perfume bottle.">
+        <source media="(max-width: 375px)" srcset="images/image-product-mobile.jpg">
+        <img src="images/image-product-desktop.jpg">
+      </picture>
+    </div>
     <div class="col-2">
       <h2>PERFUME</h2>
       <h1>Gabrielle Essence Eau De Parfum</h1>
