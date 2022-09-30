@@ -4,6 +4,7 @@
       "Selector-type-case": "lower",
       "color-no-invalid-hex": true,
       "property-no-unknown": true,
-      "no-duplicate-selectors": true
+      "no-duplicate-selectors": true,
+      "unit-disallowed-list": "px"
   }
 }
